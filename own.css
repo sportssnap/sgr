@@ -1,74 +1,72 @@
-.link-box {
-        display: flex;
-        align-items: center;
-        padding: 5px 10px;
-        margin-bottom: 10px;
-        border: 2px solid #000;
-        font-weight: bold;
-        text-decoration: none;
-        color: black;
-        flex-wrap: nowrap;
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        height: 50px;
-    }
-    .link-box img {
-        width: 40px;
-        height: 40px;
-        flex-shrink: 0;
-    }
-    .link-text {
-        flex-grow: 1;
-        margin-left: 20px;
-        text-decoration: none;
-        color: black;
-        font-size: 16px;
-    }
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    .live-icon {
-        color: red;
-        font-weight: bold;
-        animation: blink-animation 1s infinite;
-        margin-left: 10px;
-    }
-    @keyframes blink-animation {
-        to {
-            visibility: hidden;
+.blue-box {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            padding: 5px;
+            text-align: center;
+            width: 100%;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px; 
         }
-    }
-    @media (max-width: 600px) {
-        .link-text {
-            margin-left: 10px;
-            font-size: 14px;
-        }
-        .live-icon {
-            margin-left: 10px;
-        }
-    }
-    .link-box:hover {
-        background-color: #d0d0d0;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-    .link-box:hover .link-text, .link-box:hover a {
-        color: black;
-    }
-    .live-now {
-        background-color: red;
-        color: white;
-        padding: 5px;
-        border-radius: 1px;
-        font-size: 12px;
-    }
-    .blink {
-        animation: blink-animation 1s steps(2, start) infinite;
-    }
-    .countdown span, .match-end span {
-        background-color: black;
-        color: white;
-        padding: 5px;
-        border-radius: 1px;
-        margin: 0 2px;
-        font-size: 12px;
-    }
+            .link-box {
+                display: flex;
+                align-items: center;
+                padding: 3px 8px; 
+                margin-bottom: 10px;
+                border: 2px solid #000;
+                font-weight: bold;
+                text-decoration: none;
+                color: black;
+                flex-wrap: nowrap;
+                transition: background-color 0.3s ease, box-shadow 0.3s ease;
+                height: 40px; 
+                position: relative;
+            }
+            .link-box img {
+                width: 30px;
+                height: 30px;
+                flex-shrink: 0;
+            }
+            .link-text {
+                flex-grow: 1;
+                margin-left: 15px;
+                text-decoration: none; 
+                color: black;
+                font-size: 14px; 
+            }
+            .view-now {
+                position: absolute;
+                right: 5px;
+                background-color: red; 
+                color: white; 
+                padding: 8px 6px;
+                font-size: 12px; 
+                font-weight: bold;
+                border-radius: 3px; 
+                text-decoration: none; 
+line-height: 1.2; 
+                animation: blink-animation 1s steps(2, start) infinite; 
+            }
+            a {
+                text-decoration: none; 
+                color: black;
+            }
+            a span {
+                text-decoration: none; 
+            }
+            .link-box:hover {
+                background-color: #d0d0d0;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            }
+            .link-box:hover .link-text, .link-box:hover a {
+                color: black;
+            }
+            @keyframes blink-animation {
+                0% { opacity: 1; }
+                50% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+            .widget-container {
+                display: none; 
+            }
